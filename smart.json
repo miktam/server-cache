@@ -1,0 +1,8 @@
+{
+  "name": "server-cache",
+  "description": "Fast cache for the server side useful for REST API in Meteor",
+  "homepage": "https://github.com/avrora/server-cache",
+  "author": "Andrei Karpushonak <andrei@avrora.io>",
+  "version": "0.1.0",
+  "git": "https://github.com/avrora/server-cache.git"
+}
