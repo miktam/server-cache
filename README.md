@@ -12,6 +12,10 @@ Collections for storing cached data is `cache_` + provided parameter during ApiC
 
 ## Usage
 
+The module exposes `ApiCache` object, which shall be instantiated with the cache name and ttl.
+
+In the example below, with simple endpoint implementation using [iron-router](https://atmospherejs.com/package/iron-router), `cache.set` and `cache.get` methods help to store and retrieve the cache data.
+
 ```js
     // instantiate the cache with name and 60s ttl (expiration time)
     var cache = new ApiCache('rest', 60);
@@ -25,15 +29,15 @@ Collections for storing cached data is `cache_` + provided parameter during ApiC
         action: function() {
           // key for cache - the url of this endpoint
           var keyForCache = this.request.url;
-          var dataFromCache = ApiCache.get(keyForCache);
+          var dataFromCache = cache.get(keyForCache);
           if (dataFromCache) {
-            // data is cached, do not bother with calucation, just send it back
+            // data is cached, do not bother with calculation, just send it back
             this.response.end(JSON.stringify(dataFromCache));
           } else {
             // retrieve the data from anywhere as data is not cached
             var dataHardToGet = { heavy_calculation: true };
             // store data in the cache using url as a key
-            ApiCache.set(keyForCache, data);
+            cache.set(keyForCache, data);
             this.response.end(JSON.stringify(dataHardToGet));
           }
         }
