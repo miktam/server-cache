@@ -25,19 +25,15 @@ Collections for storing cached data is `cache_` + provided parameter during ApiC
         action: function() {
           // key for cache - the url of this endpoint
           var keyForCache = this.request.url;
-
           var dataFromCache = ApiCache.get(keyForCache);
-
           if (dataFromCache) {
             // data is cached, do not bother with calucation, just send it back
             this.response.end(JSON.stringify(dataFromCache));
           } else {
             // retrieve the data from anywhere as data is not cached
             var dataHardToGet = { heavy_calculation: true };
-
             // store data in the cache using url as a key
             ApiCache.set(keyForCache, data);
-
             this.response.end(JSON.stringify(dataHardToGet));
           }
         }
@@ -49,4 +45,4 @@ Collections for storing cached data is `cache_` + provided parameter during ApiC
 
 The MIT License (MIT)
 
-Copyright (c) 2014 @miktam, aka Andrei Karpushonak, http://avrora.io
+Copyright (c) 2014, Andrei Karpushonak aka @miktam, http://avrora.io
