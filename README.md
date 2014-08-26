@@ -8,7 +8,7 @@ Collections for storing cached data is `cache_` + provided parameter during ApiC
 
 ## Installation
 
-`mrt add server-cache`
+`meteor add miktam:server-cache`
 
 ## Usage
 
