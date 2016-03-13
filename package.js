@@ -1,8 +1,8 @@
 Package.describe({
   summary: 'Server-side cache useful for REST API',
-  version: '0.2.0',
+  version: '1.0.0',
   name: 'miktam:server-cache',
-  git: 'https://github.com/avrora/server-cache'
+  git: 'https://github.com/miktam/server-cache'
 });
 
 Package.on_use(function (api, where) {

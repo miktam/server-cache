@@ -49,4 +49,4 @@ In the example below, with simple endpoint implementation using [iron-router](ht
 
 The MIT License (MIT)
 
-Copyright (c) 2014, Andrei Karpushonak aka @miktam, http://avrora.io
+Copyright (c) 2014, Andrei Karpushonak aka @miktam
